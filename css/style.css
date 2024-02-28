@@ -91,8 +91,9 @@ body {
 }
 
 .main .products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 
@@ -101,7 +102,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 300px;
   background-color: lightcyan;
   border-radius: 4px;
   padding: 16px;
@@ -120,6 +121,10 @@ body {
 .main .products .card .card-price {
   align-self: flex-end;
   margin-top: 10px;
+}
+.main .products .card .card-desc {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 @media screen and (min-width: 575px) {
@@ -141,4 +146,16 @@ body {
   .container .nav.hidden {
     flex-basis: 120px;
   }
+}
+
+@media screen and (min-width: 750px) {
+  .main .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items:stretch;
+  }
+  .main .products .card {
+    width: 100%;
+  }
+
 }
