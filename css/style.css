@@ -1,0 +1,144 @@
+:root {
+  --hover-bg-color: #ffffff66;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  height: 50px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  background-color: aquamarine;
+}
+
+.header .burger-menu {
+  padding: 24px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  background-image: url(/img/burger-menu-svgrepo-com.svg);
+  background-size: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header .burger-menu:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.header .flex-wr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header .flex-wr .title {
+  font-size: 24px;
+}
+
+
+.container {
+  display: flex;
+}
+
+.container .nav {
+  flex: 0 0 120px;
+  height: calc(100dvh - 50px);
+  background-color: aqua;
+  overflow: hidden;
+  transition: flex-basis .3s ease 0s;
+}
+
+.container .nav.hidden {
+  flex-basis: 0;
+}
+
+.container .nav .nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  padding: 8px;
+  margin: 0;
+}
+
+.container .nav li{
+  list-style-type:none;
+  display: flex;
+}
+
+.container .nav li a {
+  width: 100%;
+  padding: 8px 4px;
+  word-wrap: none;
+  white-space: none;
+}
+
+.container .nav li a:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.main {
+  font-size: 18px;
+  padding: 0 8px;
+  width: 100%;
+}
+
+.main .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 16px;
+}
+
+.main .products .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: lightcyan;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.main .products .card .card-img {
+  max-height: 200px;
+  max-width: 100%;
+}
+.main .products .card .card-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main .products .card .card-price {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 575px) {
+
+  .header .burger-menu {
+    display: none;
+  }
+
+  .container .nav {
+    flex: 0 0 120px;
+    height: 100%;
+    background-color: aqua;
+    overflow: hidden;
+    transition: flex-basis .3s ease 0s;
+    position: sticky;
+    top: 0;
+  }
+  
+  .container .nav.hidden {
+    flex-basis: 120px;
+  }
+}

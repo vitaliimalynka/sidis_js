@@ -4,8 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task_js</title>
+  <link href="/css/style.css" rel="stylesheet">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
-  
+  <header class="header">
+    <button class="burger-menu"></button>
+    <div class="flex-wr">
+      <div class="title">The Name</div>
+    </div>
+  </header>
+  <div class="container">
+    <nav class="nav hidden">
+      <ul class="nav-menu">
+        <li class="name-menu-item"><a href="#">Main</a></li>
+        <li class="name-menu-item"><a href="#">Products</a></li>
+        <li class="name-menu-item"><a href="#">Services</a></li>
+        <li class="name-menu-item"><a href="#">About Us</a></li>
+        <li class="name-menu-item"><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+    <main class="main">
+      <h1>Тестове з використанням JS</h1>
+
+      <section>
+        <h2>Функція, яка повертає оберненне</h2>
+        <input type="text" id="string">
+        <button id="reverse-btn">Обернути</button>
+        <br>
+        <br>
+        <div>
+          Результат: <code id="reverse-output"></code>
+        </div>
+      </section>
+
+      <section>
+        <h2>Генерація пароля</h2>
+        <button id="generate-btn">Згенерувати пароль</button>
+        <br>
+        <br>
+        <div>
+          Ваш пароль: <code id="password-output"></code>
+        </div>
+      </section>
+
+      <section>
+          <h2>Продукція</h2>
+          <div class="products" id="products">
+            <!-- here the data is inserted using a script -->
+          </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
