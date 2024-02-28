@@ -87,12 +87,55 @@ body {
 .main {
   font-size: 18px;
   padding: 0 8px;
+  width: 100%;
+}
+
+.main .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 16px;
+}
+
+.main .products .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: lightcyan;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.main .products .card .card-img {
+  max-height: 200px;
+  max-width: 100%;
+}
+.main .products .card .card-title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main .products .card .card-price {
+  align-self: flex-end;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 575px) {
 
   .header .burger-menu {
     display: none;
+  }
+
+  .container .nav {
+    flex: 0 0 120px;
+    height: 100%;
+    background-color: aqua;
+    overflow: hidden;
+    transition: flex-basis .3s ease 0s;
+    position: sticky;
+    top: 0;
   }
   
   .container .nav.hidden {
