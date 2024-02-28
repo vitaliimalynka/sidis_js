@@ -12,8 +12,6 @@ export function burgerHandler() {
     body.removeEventListener('click', bodyBurgerListener)
   }
 
-  console.log(classList)
-
   burgerBtn.addEventListener('click', () => {
     classList.toggle('hidden')
 
